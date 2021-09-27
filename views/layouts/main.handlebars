@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<title>GoodDeez</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{!-- w3 schoools style sheet --}}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{{!-- google fonts (other fonts) style sheets --}}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+
+<script src="/js/auto-complete.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places&callback=initAutocomplete" async defer></script>
+
+
+<!--Our style sheet DO NOT DELETE-->
+<link rel="stylesheet" href="/css/style.css">
+
+{{!-- jquery script --}}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><a href="/homepage" id="home-link"><b>Welcome to GoodDeez!</b></a></h3>
+  </div>
+  <div class="w3-large w3-text-grey" style="font-weight:bold">
+
+    <a href="/homepage" class="w3-bar-item w3-button">Home</a>
+    <a href="/products" class="w3-bar-item w3-button">Products</a>
+    <a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a>
+    <a href="/wishlist" class="w3-bar-item w3-button">Wishlist</a>
+
+    <br>
+    {{!-- {{#if loggedIn}} --}}
+    <a href="/profile" class="w3-bar-item w3-button">Profile</a>
+    <a id="logout" class="w3-bar-item w3-button">Logout</a>
+    {{!-- {{else}} --}}
+    <a id="login" href="/login" class="w3-bar-item w3-button">Login</a>
+    <a href="/signup" class="w3-bar-item w3-button">Signup</a>
+    {{!-- {{/if}} --}}
+    <br>
+    <a href="/aboutus" class="w3-bar-item w3-button w3-padding">About Us</a>
+  </div>
+</nav>
+
+<style>
+  .parallax {
+    background-image: url("../images/growing-marijuana.jpg");
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+<div class="parallax" style="text-align: center; color: white">
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+<!-- Push down content on small screens -->
+<div class="w3-hide-large" style="margin-top:83px"></div>
+
+<!-- Top header -->
+
+
+<header class="w3-container w3-xlarge">
+  <p id="main-title" class="row-6">GoodDeez Delivery Service</p>
+  {{!-- {{#if loggedIn}} --}}
+
+  <a href= "/wishlist"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
+
+  {{!-- {{/if}} --}}
+</header>
+
+  <!-- other handlebars rendered here -->
+  {{{body}}}
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/contact" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="/aboutus">About us</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i>deezNUGS LLC</p>
+        <p><i class="fa fa-fw fa-envelope"></i><a href="mailto:name@email.com">info@deeznugs.com</a></p>
+        <h4>We accept</h4>
+        <p>Cash</p>
+        <br>
+        <a href= "https://www.facebook.com/Iloveweeed420/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></a></i>
+        <a href= "https://www.instagram.com/deez_nugz_/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-large"></a></i>
+        <a href= "https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat w3-hover-opacity w3-large"></a></i>
+        <a href= "https://www.pinterest.com/marijuana/_saved/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity w3-large"></a></i>
+        <a href= "https://twitter.com/hashtag/weed" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-large"></a></i>
+        <a href= "https://www.linkedin.com/jobs/cannabis-jobs/"><i class="fa fa-linkedin w3-hover-opacity w3-large"></a></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">deezNUGS LLC</div>
+  <!-- End page content -->
+</div>
+
+
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+document.getElementById("myBtn").click();
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+    <script src="/js/slideshow.js"></script>
+    <script src='/js/display-products.js'></script>
+   
+    <script src='/js/verify-pw.js'></script>
+    <script src='/js/login.js'></script>
+
+    <script src = "/js/checkout.js"></script>
+    <script src="/js/verify-age.js"></script>
+
+</body>
+</html>
+

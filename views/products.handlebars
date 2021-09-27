@@ -1,0 +1,51 @@
+
+
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("../images/growing-marijuana.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+
+<div class="parallax">
+
+<section class="prod-container container content-section">
+{{#each product as |products|}}
+    <div class="card shop-items">
+        <div class="img-container">
+            <img src="{{image}}" alt="{{name}}" class="image" style="width:100%">
+              <div class="middle">
+    <h3 class="img-text">Made by:  {{brand}}</h3>
+  </div>
+        </div>
+    <div class = "card-text shop-item">
+        <h1><span class="shop-item-title">{{name}}</span></h1>
+
+        <p>{{thc}} THC</p>             
+    
+       <div class="shop-item-details">
+
+        <p class="price shop-item-price">${{price}}</p>
+        {{!-- product.id? --}}
+        <button data-id="{{id}}" class="btn btn-primary shop-item-button" type="button">ADD TO WISHLIST</button>
+        </div>
+    </div>
+    </div>
+{{/each}}
+</section>
+</div>
+
+
+
+
+<script src="js/cart.js"></script>
