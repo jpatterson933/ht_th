@@ -1,7 +1,7 @@
 {
-  "name": "goodies-delivery-service",
+  "name": "ht_th",
   "version": "1.0.0",
-  "description": "An application for order and delivering goodies.",
+  "description": "Heroes and Thieves",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,26 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpatterson933/goodies-delivery-service.git"
+    "url": "git+https://github.com/jpatterson933/ht_th.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Jeffery Patterson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jpatterson933/goodies-delivery-service/issues"
+    "url": "https://github.com/jpatterson933/ht_th/issues"
   },
-  "homepage": "https://github.com/jpatterson933/goodies-delivery-service#readme",
+  "homepage": "https://github.com/jpatterson933/ht_th#readme",
   "dependencies": {
-    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.1",
-    "dotenv": "^8.2.0",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "express-session": "^1.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
     "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
-    "nodemon": "^2.0.7",
-    "sequelize": "^6.6.2"
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.13",
+    "sequelize": "^6.6.5"
   }
 }

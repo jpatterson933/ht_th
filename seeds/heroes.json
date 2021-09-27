@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Jake Storm",
+        "health": 1000,
+        "attack":250,
+        "defense":300
+    }
+]
