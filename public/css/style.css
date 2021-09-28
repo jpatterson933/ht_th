@@ -22,11 +22,34 @@ header {
   display: initial;
 }
 
+/* gride layout for nav bar links */
 #nav-bar-elements {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
 
+
+#main-title {
+  text-align: center;
+}
+
+#main-nav {
+  background-color: rgba(150, 255, 150, 1);
+  text-align: center;
+  padding: 1em;
+}
+
+a {
+  margin: 0 auto;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  text-shadow: 1px 1px 1px rgb(150 255 100), 1px 1px 1px black;
+}
 
 .login-card {
   margin: 0 auto;
@@ -173,30 +196,7 @@ h6,
   font-family: "Montserrat", sans-serif;
 }
 
-/* --------------------------------------------------------BEG NAV BAR ---------------------------------------------------------------------- */
-#main-title {
-  text-align: center;
-}
 
-#main-nav {
-  background-color: rgba(150, 255, 150, 1);
-  text-align: center;
-  padding: 1em;
-}
-
-a {
-  margin: 0 auto;
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  text-shadow: 1px 1px 1px rgb(150 255 100), 1px 1px 1px black;
-}
-
-/* --------------------------------------------------------END NAV BAR ---------------------------------------------------------------------- */
 
 /* --------------------------------------------------------BEG FOOTER ---------------------------------------------------------------------- */
 

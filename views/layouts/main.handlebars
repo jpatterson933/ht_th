@@ -28,22 +28,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Sidebar/menu -->
-<nav class="nav-bar'wrapper" style="z-index:3;width:250px" id="mySidebar">
+<nav class="nav-bar'wrapper" id="mySidebar">
   <div id="nav-bar-elements">
-    <div><a href="/homepage" class="w3-bar-item w3-button">Home</a></div>
-    <div><a href="/products" class="w3-bar-item w3-button">Products</a></div>
-    <div><a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a></div>
+    <div><a href="/homepage">Home</a></div>
+    <div><a href="/products">Products</a></div>
+    <div><a href="/viewnugs">deezNUGS</a></div>
     {{!-- {{#if loggedIn}} --}}
-    <div><a href="/profile" class="w3-bar-item w3-button">Profile</a></div>
-    <div><a id="logout" class="w3-bar-item w3-button">Logout</a></div>
+    <div><a href="/profile">Profile</a></div>
+    <div><a id="logout">Logout</a></div>
     {{!-- {{else}} --}}
-    <div><a id="login" href="/login" class="w3-bar-item w3-button">Login</a></div>
-    <div><a href="/signup" class="w3-bar-item w3-button">Signup</a></div>
+    <div><a id="login" href="/login">Login</a></div>
+    <div><a href="/signup">Signup</a></div>
     {{!-- {{/if}} --}}
-    <div><a href="/aboutus" class="w3-bar-item w3-button w3-padding">About Us</a></div>
+    <div><a href="/aboutus">About Us</a></div>
   </div>
 </nav>
 
+{{!-- our plugged in parallax style  --}}
 <style>
   .parallax {
     background-image: url("../images/growing-marijuana.jpg");
@@ -57,11 +58,8 @@
 
 <div class="parallax" style="text-align: center; color: white">
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
+<div>
 
 <!-- Push down content on small screens -->
 <div class="w3-hide-large" style="margin-top:83px"></div>
@@ -77,47 +75,12 @@
   {{!-- {{/if}} --}}
 </header>
 
-  <!-- other handlebars rendered here -->
+  <!-- other handlebars rendered here when the route designated renders those pages-->
   {{{body}}}
   
-  <!-- Footer -->
-  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
-    <div class="w3-row-padding">
-      <div class="w3-col s4">
-        <h4>Contact</h4>
-        <p>Questions? Go ahead.</p>
-        <form action="/contact" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black">Send</button>
-        </form>
-      </div>
 
-      <div class="w3-col s4">
-        <h4>About</h4>
-        <p><a href="/aboutus">About us</a></p>
-      </div>
 
-      <div class="w3-col s4 w3-justify">
-        <h4>Store</h4>
-        <p><i class="fa fa-fw fa-map-marker"></i>deezNUGS LLC</p>
-        <p><i class="fa fa-fw fa-envelope"></i><a href="mailto:name@email.com">info@deeznugs.com</a></p>
-        <h4>We accept</h4>
-        <p>Cash</p>
-        <br>
-        <a href= "https://www.facebook.com/Iloveweeed420/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></a></i>
-        <a href= "https://www.instagram.com/deez_nugz_/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-large"></a></i>
-        <a href= "https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat w3-hover-opacity w3-large"></a></i>
-        <a href= "https://www.pinterest.com/marijuana/_saved/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity w3-large"></a></i>
-        <a href= "https://twitter.com/hashtag/weed" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-large"></a></i>
-        <a href= "https://www.linkedin.com/jobs/cannabis-jobs/"><i class="fa fa-linkedin w3-hover-opacity w3-large"></a></i>
-      </div>
-    </div>
-  </footer>
-
-  <div class="w3-black w3-center w3-padding-24">deezNUGS LLC</div>
+  <div>deezNUGS LLC</div>
   <!-- End page content -->
 </div>
 
