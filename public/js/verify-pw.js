@@ -6,6 +6,7 @@ const verifyPw = () => {
         alert("Your passwords do not match!")
     } else return;
 }
+
 document
     .querySelector('.signup-form')
     .addEventListener('submit', verifyPw);

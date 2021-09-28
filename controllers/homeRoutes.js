@@ -35,9 +35,7 @@ router.get('/login', (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        const profileData = await Users.findByPk(req.session.user_id, {
-            include: [{ model: Address }]
-        });
+        const profileData = await Users.findByPk(req.session.user_id);
         const profile = profileData.get({ plain: true });
         console.log(profile)
         res.render('profile', profile);

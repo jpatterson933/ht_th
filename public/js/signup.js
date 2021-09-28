@@ -6,12 +6,6 @@ const signupForm = async (event) => {
     const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
     const username = document.querySelector('#nameSignup').value.trim();
     const birth = document.querySelector('#dobSignup').value.trim();
-    // const cell = document.querySelector('#phoneSignup').value.trim();
-    // const street = document.querySelector('#street_number').value.trim();
-    // const city = document.querySelector('#locality').value.trim();
-    // const state = document.querySelector('#administrative_area_level_1').value.trim();
-    // const zip = document.querySelector('#postal_code').value.trim();
-    // const country = document.querySelector('#country').value.trim();
 
     //send user id to response
     if (email && password && username && birth) {
