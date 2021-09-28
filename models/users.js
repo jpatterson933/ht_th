@@ -33,7 +33,7 @@ Users.init (
                 len: [6],
             },
         },
-        name: {
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
         },

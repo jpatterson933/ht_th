@@ -1,82 +1,39 @@
 <section class = "prof">
-
-<div class="container">
+  <div class="container">
     <div class="main-body">
-        <!--Profile Section -->
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">                    
-                    <div class="mt-3">
-                        <!--name goes here -->
-                      <h4>{{name}}'s Profile</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--poplate profile information here -->
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-9 text-secondary">
-                      {{name}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      {{email}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      {{cell}}
-                    </div>
-                  </div>
-                  <hr>
-                  
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">{{st}}Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <p>{{address.street}}</p>
-                      {{address.city}} {{address.state}} {{address.zip}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <!--recent order and more -->
-
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Current Order Status</i></h6>
-                      <h3>Current Order status</h3>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <button>Where is my order?</button>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
+    <!--Profile Section -->
+      <div class="row gutters-sm">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">                    
+                <div class="mt-3">
+                  <!--name goes here -->
+                  <h4>{{username}}</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      <!--poplate profile information here -->
+        <div class="col-md-8">
+          <div class="card mb-3">
+            <div class="card-body">
+            <div class="row">
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{email}}
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </section>
