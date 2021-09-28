@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>GoodDeez</title>
+<title>Heroes and Thieves</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,14 +12,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
+{{!-- scripts --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-<script src="/js/auto-complete.js"></script>
-
+{{!-- <script src="/js/auto-complete.js"></script> --}}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places&callback=initAutocomplete" async defer></script>
 
 
@@ -31,29 +28,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Sidebar/menu -->
-
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><a href="/homepage" id="home-link"><b>Welcome to GoodDeez!</b></a></h3>
-  </div>
-  <div class="w3-large w3-text-grey" style="font-weight:bold">
-
-    <a href="/homepage" class="w3-bar-item w3-button">Home</a>
-    <a href="/products" class="w3-bar-item w3-button">Products</a>
-    <a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a>
-    {{!-- <a href="/wishlist" class="w3-bar-item w3-button">Wishlist</a> --}}
-
-    <br>
+<nav class="nav-bar'wrapper" style="z-index:3;width:250px" id="mySidebar">
+  <div id="nav-bar-elements">
+    <div><a href="/homepage" class="w3-bar-item w3-button">Home</a></div>
+    <div><a href="/products" class="w3-bar-item w3-button">Products</a></div>
+    <div><a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a></div>
     {{!-- {{#if loggedIn}} --}}
-    <a href="/profile" class="w3-bar-item w3-button">Profile</a>
-    <a id="logout" class="w3-bar-item w3-button">Logout</a>
+    <div><a href="/profile" class="w3-bar-item w3-button">Profile</a></div>
+    <div><a id="logout" class="w3-bar-item w3-button">Logout</a></div>
     {{!-- {{else}} --}}
-    <a id="login" href="/login" class="w3-bar-item w3-button">Login</a>
-    <a href="/signup" class="w3-bar-item w3-button">Signup</a>
+    <div><a id="login" href="/login" class="w3-bar-item w3-button">Login</a></div>
+    <div><a href="/signup" class="w3-bar-item w3-button">Signup</a></div>
     {{!-- {{/if}} --}}
-    <br>
-    <a href="/aboutus" class="w3-bar-item w3-button w3-padding">About Us</a>
+    <div><a href="/aboutus" class="w3-bar-item w3-button w3-padding">About Us</a></div>
   </div>
 </nav>
 
@@ -80,7 +67,6 @@
 <div class="w3-hide-large" style="margin-top:83px"></div>
 
 <!-- Top header -->
-
 
 <header class="w3-container w3-xlarge">
   <p id="main-title" class="row-6">GoodDeez Delivery Service</p>
@@ -168,7 +154,7 @@ function w3_close() {
     <script src='/js/login.js'></script>
 
     <script src = "/js/checkout.js"></script>
-    <script src="/js/verify-age.js"></script>
+    {{!-- <script src="/js/verify-age.js"></script> --}}
 
 </body>
 </html>

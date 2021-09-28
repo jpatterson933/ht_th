@@ -2,6 +2,10 @@ const Users = require('./users')
 const Products = require('./products')
 const Cart = require('./cart')
 const Address = require('./address')
+const Heroes = require('./heroes');
+
+
+// we need to include heroes in here somehwere
 
 //this says that any single product can belong to any number of popel
 Products.belongsToMany(Users, {

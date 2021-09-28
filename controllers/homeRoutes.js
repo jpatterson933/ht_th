@@ -2,9 +2,9 @@ const router = require('express').Router();
 const { Products, Users, Cart, Address } = require('../models')
 const withAuth = require('../utils/auth')
 
-// router.get('/', async (req, res) => {
-//     res.render('twentyone')
-// })
+router.get('/', async (req, res) => {
+    res.render('twentyone')
+})
 
 router.get('/products', async (req, res) => {
     try {
