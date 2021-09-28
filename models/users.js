@@ -40,17 +40,6 @@ Users.init (
         birth: {
             type: DataTypes.DATE,
             allowNull: false,
-            validate: {
-                //is there a way to make this current day minus 21 years?
-                isBefore: "09/11/2003"
-            },
-        },
-        cell: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
         },
     },
     //need two objects

@@ -1,3 +1,5 @@
+// slideshow function - this is the javascript function for a custom slideshow
+
 let slideIndex = 0;
 showSlides();
 function showSlides() {

@@ -65,28 +65,23 @@
 <div class="w3-hide-large" style="margin-top:83px"></div>
 
 <!-- Top header -->
-
-<header class="w3-container w3-xlarge">
+<header>
   <p id="main-title" class="row-6">GoodDeez Delivery Service</p>
   {{!-- {{#if loggedIn}} --}}
-
   <a href= "/wishlist"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
-
   {{!-- {{/if}} --}}
 </header>
 
   <!-- other handlebars rendered here when the route designated renders those pages-->
   {{{body}}}
-  
-
-
+  {{!-- footer  --}}
   <div>deezNUGS LLC</div>
-  <!-- End page content -->
 </div>
+<!-- End page content -->
 
 
 
-<script>
+{{!-- <script>
 // Accordion 
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
@@ -97,21 +92,14 @@ function myAccFunc() {
   }
 }
 
-document.getElementById("myBtn").click();
+{{!-- document.getElementById("myBtn").click(); --}}
 
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+
+</script> --}}
+
     <script src="/js/slideshow.js"></script>
-    <script src='/js/display-products.js'></script>
+    {{!-- it doesnt appear that we need this script anywhere. Whenever it is active the document.queryslector (.display-products) - does not exist anywhere - works fine without script  --}}
+    {{!-- <script src='/js/display-products.js'></script> --}}
    
     <script src='/js/verify-pw.js'></script>
     <script src='/js/login.js'></script>
