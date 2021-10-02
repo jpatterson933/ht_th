@@ -3,13 +3,13 @@
     <div class="main-body">
       {{!-- Profile section only display username and email --}}
       <div>
-        <h4>{{username}}</h4>
-        {{email}}
+        <h4>{{profile.username}}</h4>
+        {{profile.email}}
       </div>
     </div>
   </div>
 </section>
       <div>
-        <h1>Your characters</h1>
+        <h1>{{profile.username}}'s characters</h1>
         {{> character}}
       </div>

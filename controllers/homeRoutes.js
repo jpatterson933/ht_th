@@ -33,13 +33,13 @@ router.get('/profile', withAuth, async (req, res) => {
     try {
         const profileData = await Users.findByPk(req.session.user_id)
         const profile = profileData.get({ plain: true });
-        // const heroData = await Heroes.findAll();
-        // const hero = heroData.map((heroes) => heroes.get({ plain: true }));
-        // console.log(hero)
+        const heroData = await Heroes.findAll();
+        const hero = heroData.map((heroes) => heroes.get({ plain: true }));
+        console.log("herotesting", hero)
         console.log(profile)
 
-            res.render('profile', profile);
-        
+        res.render('profile', { profile, hero });
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -48,11 +48,17 @@ router.get('/profile', withAuth, async (req, res) => {
 
 // trying to render our heroes
 router.get('/profile', async (req, res) => {
-    const heroData = await Heroes.findAll();
-    const hero = heroData.map((heroes) => heroes.get({ plain: true }));
-    console.log(hero)
+    try {
 
-    res.render('profile', hero)
+        const heroData = await Heroes.findAll();
+        const hero = heroData.map((heroes) => heroes.get({ plain: true }));
+        console.log(hero)
+
+        res.render('profile')
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err);
+    }
 })
 
 router.get('/homepage', async (req, res) => {
