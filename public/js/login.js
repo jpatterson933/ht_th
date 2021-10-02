@@ -15,3 +15,5 @@ let loginForm = async (event) => {
         }
     }
 };
+
+document.querySelector('.loginForm').addEventListener('submit', loginForm);

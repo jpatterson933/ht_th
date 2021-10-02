@@ -28,9 +28,6 @@ const signupForm = async (event) => {
             }
         })
     }
-    if (password !== verifyPassword) {
-        alert("Your passwords do not match!")
-    }
 };
 document
     .querySelector('.signup-form')
