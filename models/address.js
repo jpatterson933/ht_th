@@ -48,4 +48,4 @@ Address.init(
     }
 );
 
-module.exports = Address
+module.exports = Address;

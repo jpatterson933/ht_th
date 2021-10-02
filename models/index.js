@@ -5,7 +5,10 @@ const Address = require('./address')
 const Heroes = require('./heroes');
 
 
-// we need to include heroes in here somehwere
+// here we say the user can have many heroes
+Users.hasMany(Heroes, {
+    foreignKey: 'user_id'
+})
 
 //this says that any single product can belong to any number of people
 Products.belongsToMany(Users, {
@@ -40,4 +43,5 @@ module.exports = {
     Products,
     Cart,
     Address,
+    Heroes,
 };

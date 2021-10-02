@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
-//when force is set to true, it will resync all data and redo all schemas ( i think)
+// turning force: true means the model will update itself if we make any changes to it - creates table and drops it first if it exists
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

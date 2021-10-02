@@ -1,8 +1,10 @@
 [
     {
+        "isHero": true,
         "name": "Jake Storm",
         "health": 1000,
         "attack":250,
-        "defense":300
+        "defense":300,
+        "user_id": 1
     }
 ]

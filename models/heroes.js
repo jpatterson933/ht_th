@@ -11,6 +11,11 @@ Heroes.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        isHero: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -31,6 +36,13 @@ Heroes.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             isDecimal: true,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'users',
+                key: 'id',
+            },
         },
     },
     {
