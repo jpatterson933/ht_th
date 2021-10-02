@@ -4,12 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{!-- w3 schoools style sheet --}}
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 {{!-- google fonts (other fonts) style sheets --}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 {{!-- scripts --}}
@@ -26,7 +24,6 @@
 <nav id="mySidebar">
   <div id="nav-bar-elements">
     <div><a href="/homepage">Home</a></div>
-    <div><a href="/products">Products</a></div>
     {{!-- if loggedIn is true, show login and signup form  --}}
     {{#if loggedIn}}
     <div><a id="login" href="/login">Login</a></div>
@@ -61,7 +58,6 @@
 <header>
   <p>Heroes and Thieves</p>
 </header>
-
   <!-- other handlebars rendered here when the route designated renders those pages-->
   {{{body}}}
   {{!-- footer  --}}
@@ -70,9 +66,8 @@
 <!-- End page content -->
 
 {{!-- scripts  --}}
-    <script src='/js/verify-pw.js'></script>
-    <script src='/js/login.js'></script>
-    <script src = "/js/checkout.js"></script>
+    {{!-- <script src='/js/verify-pw.js'></script> --}}
+    <script src="./js/logout.js"></script>
 
 </body>
 </html>

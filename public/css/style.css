@@ -17,15 +17,10 @@ button:hover {
   cursor: pointer;
 }
 
-/* header {
-  margin-top: 113px;
-  display: initial;
-} */
-
 /* gride layout for nav bar links */
 #nav-bar-elements {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 /* styling for divs inside nav bar  */
 #nav-bar-elements div {

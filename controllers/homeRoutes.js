@@ -1,28 +1,28 @@
 const router = require('express').Router();
-const { Products, Users, Heroes } = require('../models')
+const { Users, Heroes } = require('../models')
 const withAuth = require('../utils/auth')
 
-router.get('/products', async (req, res) => {
-    try {
-        const productData = await Products.findAll();
-        const product = productData.map((products) => products.get({ plain: true }));
-        res.render('products', { product });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+// router.get('/products', async (req, res) => {
+//     try {
+//         const productData = await Products.findAll();
+//         const product = productData.map((products) => products.get({ plain: true }));
+//         res.render('products', { product });
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
-router.get('/products/:id', async (req, res) => {
-    try {
-        const productId = await Products.findByPk(req.params.id);
-        const prodId = productId.get({ plain: true });
-        res.render('product', prodId);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+// router.get('/products/:id', async (req, res) => {
+//     try {
+//         const productId = await Products.findByPk(req.params.id);
+//         const prodId = productId.get({ plain: true });
+//         res.render('product', prodId);
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
 router.get('/login', (req, res) => {
     res.render('login');
@@ -44,10 +44,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/homepage', async (req, res) => {
     try {
-        const productData = await Products.findAll();
-        const product = productData.map((products) => products.get({ plain: true }));
-        const ranIndex = Math.floor(Math.random() * (product.length - 1))
-        res.render('homepage', product[ranIndex]);
+        res.render('homepage');
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

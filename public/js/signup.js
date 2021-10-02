@@ -8,13 +8,16 @@ const signupForm = async (event) => {
     const birth = document.querySelector('#dobSignup').value.trim();
 
     //send user id to response
-    if (email && password && username && birth) {
+    if (password !== verifyPassword) {
+        alert("Your passwords do not match!")
+        console.log("try again");
+
+    } else if (email && password && username && birth) {
         console.log("we made it");
         fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ email, password, username, birth }),
             headers: { 'Content-Type': 'application/json' },
-
             
         }).then(response => {
             console.log(response.json())

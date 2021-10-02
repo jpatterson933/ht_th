@@ -30,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 // turning force: true means the model will update itself if we make any changes to it - creates table and drops it first if it exists
+// if for someone reason you turn this to true and the table cannot be dropped, force drop through mysql 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
