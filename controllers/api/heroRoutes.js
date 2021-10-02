@@ -5,8 +5,6 @@ const { Heroes } = require('../../models');
 router.get('/', async (req, res) => {
     const heroData = await Heroes.findAll()
     res.json(heroData) 
-    console.log(heroData);
-
   });
 
 module.exports = router;

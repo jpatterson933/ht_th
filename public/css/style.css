@@ -228,6 +228,12 @@ img {
 }
 
 /* --------------------------------------------------------Character Card Styling-------------------------------------------------------------- */
+/* character grid for player profile  */
+
+#players-characters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
 #hero-card-wrapper {
   width: fit-content;

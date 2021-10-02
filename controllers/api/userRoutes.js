@@ -3,39 +3,29 @@ const { Users } = require('../../models')
 
 // grabs all users
 router.get('/', async (req, res) => {
-    const userData = await Users.findAll()
-    res.json(userData) 
+  const userData = await Users.findAll()
+  res.json(userData)
 })
 
 // responsible for creating a new user and logging them in
 router.post('/', async (req, res) => {
-      console.log(req.body)
-      Users.create(req.body)
-
-      .then(response => {
-        req.session.save(() => {
-          req.session.user_id = response.id;
-          req.session.logged_in = true;
-
-          console.log(response.id)
-
-        res.status(200).json(response) 
-        
+  Users.create(req.body)
+    .then(response => {
+      req.session.save(() => {
+        req.session.user_id = response.id;
+        req.session.logged_in = true;
+        res.status(200).json(response)
       })
-        
-      }).catch (err => {
+    }).catch(err => {
       console.log(err)
       res.status(400).json(err);
     });
-
 });
 
 //responsible for user logging in
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.body)
     const userData = await Users.findOne({ where: { email: req.body.email } });
-    console.log(userData)
     if (!userData) {
       res.status(400)
         .json({ message: 'Incorrect email or password, please try again' });
