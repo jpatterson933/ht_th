@@ -54,4 +54,4 @@ Heroes.init(
     }
 )
 
-module.exports = Heroes
+module.exports = Heroes;
