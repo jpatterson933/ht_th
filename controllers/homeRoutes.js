@@ -46,21 +46,6 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
-// trying to render our heroes
-router.get('/profile', async (req, res) => {
-    try {
-
-        const heroData = await Heroes.findAll();
-        const hero = heroData.map((heroes) => heroes.get({ plain: true }));
-        console.log(hero)
-
-        res.render('profile')
-    } catch (err) {
-        console.log(err)
-        res.status(500).json(err);
-    }
-})
-
 router.get('/homepage', async (req, res) => {
     try {
         const productData = await Products.findAll();

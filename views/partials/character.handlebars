@@ -1,13 +1,11 @@
 
+<div id="profile-hero-card-wrapper">
+    
 {{#each hero as |heroes|}}
-<div>
-    <ul>
-        <li>testing</li>
-        <li>{{name}}</li>
-        <li>{{health}}</li>
-        <li>{{attack}}</li>
-        <li>{{defense}}</li>
-        <li></li>
-    </ul>
-</div>
+        <h4>{{name}}</h4>
+        <p>Health: {{health}}</p>
+        <p>Attack Strength: {{attack}}</p>
+        <p>Defensive Power: {{defense}}</p>
 {{/each}}
+    
+</div>
