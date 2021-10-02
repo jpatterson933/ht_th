@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Heroes extends Model {}
+class Heroes extends Model { }
 
 Heroes.init(
     {
@@ -11,10 +11,6 @@ Heroes.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        // image: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        // },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -36,12 +32,6 @@ Heroes.init(
             allowNull: false,
             isDecimal: true,
         },
-        // weight: {
-        //     type: DataTypes.STRING,
-        //     validate: {
-        //         isAlphanumeric: true,
-        //     }
-        // },
     },
     {
         sequelize,
@@ -51,7 +41,5 @@ Heroes.init(
         modelName: 'heroes',
     }
 )
-
-
 
 module.exports = Heroes

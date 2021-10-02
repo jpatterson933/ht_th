@@ -7,24 +7,24 @@ const Heroes = require('./heroes');
 
 // we need to include heroes in here somehwere
 
-//this says that any single product can belong to any number of popel
+//this says that any single product can belong to any number of people
 Products.belongsToMany(Users, {
-    through:{
+    through: {
         model: Cart,
-        unique:false
+        unique: false
     },
     as: 'users_cart',
-    foreignKey:'products_id'
+    foreignKey: 'products_id'
 });
 
 //this is says that any single user can have an associate with any number of products
 Users.belongsToMany(Products, {
-    through:{
+    through: {
         model: Cart,
-        unique:false
+        unique: false
     },
     as: 'products',
-    foreignKey:'users_id'
+    foreignKey: 'users_id'
 })
 
 Address.belongsTo(Users, {
@@ -35,10 +35,9 @@ Users.hasOne(Address, {
     foreignKey: 'user_id'
 });
 
-
-module.exports = { 
-    Users, 
-    Products, 
+module.exports = {
+    Users,
+    Products,
     Cart,
     Address,
 };
