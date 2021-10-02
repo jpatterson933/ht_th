@@ -15,6 +15,8 @@ let loginForm = async (event) => {
         }
     }
 };
+
+// should separate these so we can only have each one rendered when the user is either logged in then the logout script will work or vice versa
 const logout = async () => {
     console.log("testing")
     // Make a POST request to destroy the session on the back end
