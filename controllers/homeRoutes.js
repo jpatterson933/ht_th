@@ -2,10 +2,6 @@ const router = require('express').Router();
 const { Products, Users, Cart, Address } = require('../models')
 const withAuth = require('../utils/auth')
 
-router.get('/', async (req, res) => {
-    res.render('twentyone')
-})
-
 router.get('/products', async (req, res) => {
     try {
         const productData = await Products.findAll();
@@ -62,28 +58,9 @@ router.get('/contact', (req, res) => {
     res.render('contact')
 })
 
-// router.post('/wishlist', async (req, res) => {
-//     try {
-//         console.log(req.body);
-//         console.log('hello')
-//         const id = parseInt(req.body.id)
-//         const cartData = await Cart.create({ products_id: id, users_id: req.session.user_id });
-//         res.status(200).json(cartData);
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
 
 router.get('/signup', (req, res) => {
     res.render('signup')
-})
-
-router.get('/aboutus', (req, res) => {
-    res.render('aboutus')
-})
-
-router.get('/viewnugs', (req, res) => {
-    res.render('viewnugs')
 })
 
 router.post('/logout', (req, res) => {

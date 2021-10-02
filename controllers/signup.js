@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Users } = require('../models')
 
+// renders sign up page
 router.get('/signup', async (req, res) => {
     res.render('signup')
 })

@@ -1,11 +1,13 @@
 const router = require('express').Router();
 const { Users } = require('../../models')
 
+// grabs all users
 router.get('/', async (req, res) => {
     const userData = await Users.findAll()
     res.json(userData) 
 })
 
+// responsible for creating a new user and logging them in
 router.post('/', async (req, res) => {
       console.log(req.body)
       Users.create(req.body)

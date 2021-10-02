@@ -16,15 +16,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-{{!-- <script src="/js/auto-complete.js"></script> --}}
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places&callback=initAutocomplete" async defer></script>
-
-
 <!--Our style sheet DO NOT DELETE-->
 <link rel="stylesheet" href="/css/style.css">
 
 {{!-- jquery script --}}
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Sidebar/menu -->
@@ -32,7 +27,6 @@
   <div id="nav-bar-elements">
     <div><a href="/homepage">Home</a></div>
     <div><a href="/products">Products</a></div>
-    <div><a href="/viewnugs">deezNUGS</a></div>
     {{!-- if loggedIn is true, show login and signup form  --}}
     {{#if loggedIn}}
     <div><a id="login" href="/login">Login</a></div>
@@ -43,7 +37,6 @@
     <div><a id="logout">Logout</a></div>
     {{!-- end if statement - also not sure why this works this way but it works  --}}
     {{/if}}
-    <div><a href="/aboutus">About Us</a></div>
   </div>
 </nav>
 
@@ -79,33 +72,10 @@
 </div>
 <!-- End page content -->
 
-
-
-<script>
-// Accordion 
-/*function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-{{!-- document.getElementById("myBtn").click(); --}}
-
-*/
-</script>
-
-    <script src="/js/slideshow.js"></script>
-    {{!-- it doesnt appear that we need this script anywhere. Whenever it is active the document.queryslector (.display-products) - does not exist anywhere - works fine without script  --}}
-    {{!-- <script src='/js/display-products.js'></script> --}}
-   
+{{!-- scripts  --}}
     <script src='/js/verify-pw.js'></script>
     <script src='/js/login.js'></script>
-
     <script src = "/js/checkout.js"></script>
-    {{!-- <script src="/js/verify-age.js"></script> --}}
 
 </body>
 </html>
