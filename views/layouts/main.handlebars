@@ -23,7 +23,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Sidebar/menu -->
-<nav class="nav-bar'wrapper" id="mySidebar">
+<nav id="mySidebar">
   <div id="nav-bar-elements">
     <div><a href="/homepage">Home</a></div>
     <div><a href="/products">Products</a></div>
@@ -31,7 +31,7 @@
     {{#if loggedIn}}
     <div><a id="login" href="/login">Login</a></div>
     <div><a href="/signup">Signup</a></div>
-    {{!-- else if loggedIn is flase show profiel and logout form  --}}
+    {{!-- else if loggedIn is false show profile and logout form  --}}
     {{else}}
     <div><a href="/profile">Profile</a></div>
     <div><a id="logout">Logout</a></div>
@@ -56,9 +56,6 @@
 
 <!-- !PAGE CONTENT! -->
 <div>
-
-<!-- Push down content on small screens -->
-<div class="w3-hide-large" style="margin-top:83px"></div>
 
 <!-- Top header -->
 <header>
