@@ -20,7 +20,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
-router.get('/homepage', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         res.render('homepage');
     } catch (err) {

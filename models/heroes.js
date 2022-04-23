@@ -14,7 +14,6 @@ Heroes.init(
         isHero: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
-
         },
         name: {
             type: DataTypes.STRING,
