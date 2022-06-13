@@ -26,12 +26,12 @@
     <div><a href="/">Home</a></div>
     {{!-- if loggedIn is true, show login and signup form  --}}
     {{#if loggedIn}}
-    <div><a id="login" href="/login">Login</a></div>
-    <div><a href="/signup">Signup</a></div>
-    {{!-- else if loggedIn is false show profile and logout form  --}}
-    {{else}}
     <div><a href="/profile">Profile</a></div>
     <div><a id="logout">Logout</a></div>
+    {{!-- else if loggedIn is false show profile and logout form  --}}
+    {{else}}
+    <div><a id="login" href="/login">Login</a></div>
+    <div><a href="/signup">Signup</a></div>
     {{!-- end if statement - also not sure why this works this way but it works  --}}
     {{/if}}
   </div>
